@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Board</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="board.css">
+</head>
+<body>
+    <canvas class = "canvas"></canvas>
+    <div class = "main-container">
+        <div class ="tools">
+            <div class="pen">
+                <button class = "pen"  title = "Draw">
+                    <i class="fas fa-pen icon"></i>
+                </button>
+                <div class="pen-options color-bar penColors">
+                    
+                   <!--<div class="thickness">
+                        <i class="fas fa-circle" size="2" style="font-size:x-small;"></i>
+                        <i class="fas fa-circle" size="4" style="font-size:small;"></i>
+                        <i class="fas fa-circle" size="6" style="font-size: medium;"></i>
+                        <i class="fas fa-circle" size="10" style="font-size: large;"></i>
+                        <i class="fas fa-circle" size="14" style="font-size: x-large;"></i>
+                        <i class="fas fa-circle" size="20" style="font-size: xx-large;"></i>
+                        <i class="fas fa-circle" size="25" style="font-size: xxx-large;"></i>
+                    </div>--> 
+                    <i class="fas fa-pen icon  color" title = "Red" style="color: red;"></i>
+                    <i class="fas fa-pen icon  color"title = "Green"  style="color:green;"></i>
+                    <i class="fas fa-pen icon  color"  title = "Black" style="color:black;"></i>
+                    <i class="fas fa-pen icon  color" title = "Blue"  style="color:blue;"></i>
+                </div>
+            </div>
+            
+            <button class = "eraser icon" title = "Eraser">
+                <i class="fas fa-eraser erase icon"></i>
+            </button>
+            <button class = "clear" title = "Clear the canvas"> Clear
+                <!-- <i class="fas fa-eraser erase"></i> -->
+            </button>
+            
+            <input class = "randomCol" type = "color" title = "Select Random Color" placeholder="color"></input>
+            <div class="stickyNote">
+                <img src="./shapes/StickyNote (1).svg" alt="" srcset="" class="Sticky">
+            </div>
+            <div class="shapes">
+                <i class="fas fa-shapes"></i>
+                <div class="shape-options" >
+                    <div >
+                        <img src="./shapes/circle.jpg" class="circle" style="width: 2rem; height: 2rem;">
+                    </div>
+                    <div>
+                        <img src="./shapes/square.png"  class="square" style="width: 4rem; height: 2rem;">
+
+                    </div>
+                    <div >
+                        <img src="./shapes/triangle.jpg" class="triangle" style="width: 2rem; height: 2rem;">
+                    </div>
+                    
+                    <div >
+                        <img src="./shapes/rectangle.png" class="rectangle"  style="width: 2rem; height: 2rem;">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class = "otherOperations">
+                <button class="zoom-in">
+                    <i class="fas fa-search-plus icon"></i>
+                </button>
+                <button class="zoom-out">
+                    <i class="fas fa-search-minus icon"></i>
+                </button>
+                <button class = "save" title = "Save" >
+                    <i class="fas fa-download icon"></i>
+                </button>
+                <button class = "undo" title = "Undo" >
+                    <i class="fas fa-undo icon"></i>
+                </button>  
+                <button class = "redo" title = "Redo">
+                    <i class="fas fa-redo icon"></i>
+                </button>
+            </div>
+        </div>
+     
+        
+    </div>
+   
+    <script src="board.js"></script>
+    <script src="shape.js"></script>
+    <script src="stick.js"></script>
+</body>
+</html>
